@@ -5,6 +5,7 @@ name: GatsbyJS CI
 
 env:
   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+  NETLIFY_SITE_ID: ad7fa4fd-b1c1-4d9c-93ff-8e656a2a3a7f
 
 on:
   push:

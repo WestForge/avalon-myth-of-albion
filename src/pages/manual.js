@@ -88,6 +88,7 @@ export const data = graphql`
       links: Page(filter: {header: {_eq: true}}, sort: ["sort", "date_created"]) {
         menu
         slug
+        id
       }
       features: Page(filter: {feature: {_eq: true}}) {
         id

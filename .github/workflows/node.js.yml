@@ -42,4 +42,4 @@ jobs:
     - run: npm install gatsby-cli -g
     - run: npm install
     - run: npm run build
-    - run: netlify deploy --prod
+    - run: netlify deploy --prod --dir=./public

@@ -3,6 +3,9 @@
 
 name: GatsbyJS CI
 
+env:
+  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
 on:
   push:
     branches: [ "main" ]
@@ -38,3 +41,4 @@ jobs:
     - run: npm install gatsby-cli -g
     - run: npm install
     - run: npm run build
+    - run: netlify deploy --prod

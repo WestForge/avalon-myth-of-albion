@@ -14,24 +14,8 @@ const IndexPage = ({ data }) => {
   console.log(page)
   return (
     <Layout>
-      <Banner page={page}>
-        {page.sections.map(function (section) {
-          const link = "#" + section.slug
-          return (
-            <Anchor href={link}>
-              <Button>{section.title}</Button>
-            </Anchor>
-          );
-        })}
-      </Banner>
       <Page kind="narrow">
-        {page.sections.map(function (section) {
-          return (
-            <div id={section.slug} key={section.slug}>
-              <Section section={section} />
-            </div>
-          );
-        })}
+        Support
       </Page>
     </Layout>
   )

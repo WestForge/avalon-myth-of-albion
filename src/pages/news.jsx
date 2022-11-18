@@ -7,8 +7,6 @@ import Layout from "../layouts/layout"
 import Banner from "../components/banner"
 import { Page, Button, Anchor } from 'grommet';
 
-import Section from "../components/section"
-
 const IndexPage = ({ data }) => {
   const page = data.directus.page;
   return (

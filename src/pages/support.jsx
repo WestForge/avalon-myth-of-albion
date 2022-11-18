@@ -11,7 +11,6 @@ import Section from "../components/section"
 
 const IndexPage = ({ data }) => {
   const page = data.directus.page;
-  console.log(page)
   return (
     <Layout>
       <Page kind="narrow">

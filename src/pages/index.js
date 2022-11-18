@@ -2,13 +2,12 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Banner from "../components/banner"
-import { Page, Button, Anchor } from 'grommet';
+import { Box, Button, Anchor } from 'grommet';
 
 import Section from "../components/section"
 
 const IndexPage = ({ data }) => {
   const page = data.directus.page;
-  console.log(page)
   return (
     <>
       <Banner page={page}>
@@ -21,7 +20,7 @@ const IndexPage = ({ data }) => {
           );
         })}
       </Banner>
-      <Page kind="narrow">
+      <Box kind="narrow">
         {page.sections.map(function (section) {
           return (
             <div id={section.slug} key={section.slug}>
@@ -29,7 +28,7 @@ const IndexPage = ({ data }) => {
             </div>
           );
         })}
-      </Page>
+      </Box>
     </>
   )
 }

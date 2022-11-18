@@ -6,7 +6,7 @@ import BackgroundImage from 'gatsby-background-image'
 import { Main, Box, Paragraph } from "grommet"
 
 export default function Banner({ page, children }) {
-  console.log(page)
+
   const banner = getImage(page.background.imageFile)
   const bgImage = convertToBgImage(banner)
   const image = getImage(page.logo.imageFile)

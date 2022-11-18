@@ -1,9 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-
-
-import Layout from "../layouts/layout"
 import Banner from "../components/banner"
 import { Page, Button, Anchor } from 'grommet';
 
@@ -13,7 +10,7 @@ const IndexPage = ({ data }) => {
   const page = data.directus.page;
   console.log(page)
   return (
-    <Layout>
+    <>
       <Banner page={page}>
         {page.sections.map(function (section) {
           const link = "#" + section.slug
@@ -33,7 +30,7 @@ const IndexPage = ({ data }) => {
           );
         })}
       </Page>
-    </Layout>
+    </>
   )
 }
 

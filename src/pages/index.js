@@ -9,27 +9,28 @@ import Section from "../components/section"
 const IndexPage = ({ data }) => {
   const page = data.directus.page;
   return (
-    <>
+    <Box>
       <Banner page={page}>
         {page.sections.map(function (section) {
           const link = "#" + section.slug
           return (
-            <Anchor href={link}>
-              <Button>{section.title}</Button>
-            </Anchor>
+            <Box direction="row">
+              <Box align="center" >
+              <Anchor href={link}>
+                <Button>{section.title}</Button>
+              </Anchor>
+              </Box>
+            </Box>
           );
         })}
       </Banner>
-      <Box kind="narrow">
-        {page.sections.map(function (section) {
-          return (
-            <div id={section.slug} key={section.slug}>
-              <Section section={section} />
-            </div>
-          );
-        })}
-      </Box>
-    </>
+      {page.sections.map(function (section) {
+        return (
+          <Section id={section.slug} key={section.slug} section={section} />
+        );
+      })}
+
+    </Box>
   )
 }
 
@@ -43,7 +44,7 @@ export const query = graphql`
             childImageSharp {
               gatsbyImageData(
                 placeholder: NONE
-                width: 320
+                width: 640
                 layout: FIXED
                 formats: [AUTO, WEBP]
               )
@@ -91,7 +92,7 @@ export const query = graphql`
                 childImageSharp {
                   gatsbyImageData(
                     placeholder: NONE
-                    width: 1920
+                    width: 180
                     layout: FULL_WIDTH
                     formats: [AUTO, WEBP]
                   )

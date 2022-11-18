@@ -11,7 +11,7 @@ export default function Modal({ feature, children }) {
 
   return (
     <>
-      <Box pad="small" fill align="center" justify="center">
+      <Box pad="small" fill align="center" justify="center" border={{ color: 'white', size: 'small' }}>
         <Button fill onClick={() => setShowLayer(true)}>
           <Stack anchor="bottom">
             <GatsbyImage image={image} alt="abc" />

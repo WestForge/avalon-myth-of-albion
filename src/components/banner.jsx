@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from 'gatsby-background-image'
 
-import { Main, Box, Paragraph } from "grommet"
+import { Box, Paragraph } from "grommet"
 
 export default function Banner({ page, children }) {
 
@@ -12,7 +12,7 @@ export default function Banner({ page, children }) {
   const image = getImage(page.logo.imageFile)
 
   return (
-    <Main fill>
+    <Box fill="true " style={{ height: "100vh" }}>
       <BackgroundImage Tag="bgimage" {...bgImage} style={{ height: "100%" }}>
         <Box fill align="center" pad="large" justify="center" >
           <GatsbyImage image={image} alt="" />
@@ -20,6 +20,6 @@ export default function Banner({ page, children }) {
           {children}
         </Box>
       </BackgroundImage>
-    </Main>
+    </Box>
   )
 }

@@ -3,20 +3,21 @@ import { getImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
 import BackgroundImage from 'gatsby-background-image'
 
-import { Main, Box, PageContent, Heading, Paragraph, Grid } from 'grommet';
+import { Grid, Box, PageContent, Heading, Paragraph } from 'grommet';
 
 import Feature from "../components/feature"
 import Modal from '../components/modal'
 
-export default function Section({ section }) {
+export default function Section({ section, id, key }) {
   const banner = getImage(section.background.imageFile)
   const bgImage = convertToBgImage(banner)
 
   return (
-    <Main fill="vertical" style={{ height: "100vh" }}>
+    <Box id={id} key={key} fill="vertical" style={{ height: "100vh" }}>
       <BackgroundImage Tag="bgimage" {...bgImage} style={{ height: "100%" }}>
-        <PageContent fill justify="center" >
-          <Box>
+        <Grid columns={{ count: 3, size: 'auto', }} gap="small"  fill >
+
+          <Box fill justify="center" >
             <Box align="center">
               <Heading level={2}>{section.title}</Heading>
               <Paragraph>
@@ -33,10 +34,11 @@ export default function Section({ section }) {
               })}
             </Grid>
           </Box>
-        </PageContent>
-
+          <Box />
+          <Box />
+        </Grid>
       </BackgroundImage>
-    </Main>
+    </Box>
 
   )
 }

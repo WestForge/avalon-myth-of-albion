@@ -5,16 +5,9 @@ module.exports = {
     title: `Myth of Albion`,
     siteUrl: `https://mythofalbion.com`,
     description: `Myth of Albion`,
-    author: `francis west`
+    author: `West Forge Ltd.`
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-theme-ui',
-      options: {
-        prismPreset: 'night-owl',
-        preset: '@theme-ui/preset-funk',
-      },
-    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-image",

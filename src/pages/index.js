@@ -1,36 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Banner from "../components/banner"
-import { Box, Button, Anchor } from 'grommet';
-
-import Section from "../components/section"
-
 const IndexPage = ({ data }) => {
   const page = data.directus.page;
-  return (
-    <Box>
-      <Banner page={page}>
-        {page.sections.map(function (section) {
-          const link = "#" + section.slug
-          return (
-            <Box direction="row">
-              <Box align="center" >
-              <Anchor href={link}>
-                <Button>{section.title}</Button>
-              </Anchor>
-              </Box>
-            </Box>
-          );
-        })}
-      </Banner>
-      {page.sections.map(function (section) {
-        return (
-          <Section id={section.slug} key={section.slug} section={section} />
-        );
-      })}
 
-    </Box>
+  console.log(page)
+  return (
+    <>
+    </>
   )
 }
 

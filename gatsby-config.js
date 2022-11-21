@@ -8,6 +8,7 @@ module.exports = {
     author: `West Forge Ltd.`
   },
   plugins: [
+    "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-image",
@@ -16,9 +17,9 @@ module.exports = {
     {
       resolve: "@directus/gatsby-source-directus",
       options: {
-        url: process.env.GATSBY_DIRECTUS_URL,
+        url: process.env.DIRECTUS_URL,
         auth: {
-          token: process.env.GATSBY_TOKEN,
+          token: process.env.DIRECTUS_TOKEN,
         },
       },
     },

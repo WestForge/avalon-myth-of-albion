@@ -11,3 +11,8 @@ $env:GATSBY_DIRECTUS_URL = "https://directus.badape.online"
 $env:GATSBY_TOKEN = "123abc"
 ```
 
+example .env
+```
+DIRECTUS_URL=https://example.com
+DIRECTUS_TOKEN=abcd
+```

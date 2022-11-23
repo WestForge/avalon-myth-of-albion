@@ -35,8 +35,8 @@ jobs:
     - name: 'Create env file'
       run: |
         touch .env
-        echo "GATSBY_DIRECTUS_URL="${{ secrets.GATSBY_DIRECTUS_URL }} >> .env
-        echo "GATSBY_TOKEN="${{ secrets.GATSBY_TOKEN }} >> .env
+        echo "DIRECTUS_URL="${{ secrets.DIRECTUS_URL }} >> .env
+        echo "DIRECTUS_TOKEN="${{ secrets.DIRECTUS_TOKEN }} >> .env
         cat .env
         
     - name: Use Node.js ${{ matrix.node-version }}
